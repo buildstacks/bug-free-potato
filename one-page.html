@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KFZ-Reparaturen Hoffmann | One Page Preview</title>
+    <meta
+      name="description"
+      content="Einseitiges Rebuild fuer KFZ-Reparaturen Hoffmann mit echten Bildern und modernem UI."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f0f0f;
+        --bg-soft: #171717;
+        --panel: #151515;
+        --line: rgba(255, 255, 255, 0.12);
+        --line-strong: rgba(255, 255, 255, 0.24);
+        --text: #f4efe7;
+        --muted: #bfb4a6;
+        --accent: #d78b53;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+        --radius-sm: 18px;
+        --radius-md: 28px;
+        --radius-lg: 42px;
+        --content: 1220px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Instrument Sans", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at top right, rgba(215, 139, 83, 0.12), transparent 24rem),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18rem);
+        z-index: -1;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      .site-header,
+      .section,
+      .site-footer {
+        width: min(calc(100% - 2rem), var(--content));
+        margin-inline: auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 1rem;
+        z-index: 20;
+        margin-top: 1rem;
+        padding: 1rem 1.15rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        background: rgba(15, 15, 15, 0.86);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        backdrop-filter: blur(16px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        min-width: 0;
+      }
+
+      .brand-mark {
+        width: 4.3rem;
+        height: 2.7rem;
+        object-fit: contain;
+        padding: 0.14rem;
+        flex: 0 0 auto;
+        border-radius: 999px;
+        background: white;
+      }
+
+      .brand-copy {
+        display: grid;
+        gap: 0.08rem;
+        min-width: 0;
+      }
+
+      .brand-title,
+      .brand-subtitle,
+      .eyebrow,
+      .fact-label,
+      .card-kicker,
+      .news-date,
+      .contact-label,
+      .hours-label,
+      .mini-list span {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .brand-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+
+      .brand-subtitle,
+      .eyebrow,
+      .fact-label,
+      .card-kicker,
+      .news-date,
+      .contact-label,
+      .hours-label {
+        color: var(--accent);
+        font-size: 0.74rem;
+        font-weight: 700;
+      }
+
+      .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+      }
+
+      .main-nav a {
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      .main-nav a:hover,
+      .main-nav a:focus-visible,
+      .main-nav a.is-active {
+        color: var(--text);
+      }
+
+      .menu-toggle {
+        display: none;
+        border: 0;
+        border-radius: 999px;
+        padding: 0.72rem 0.92rem;
+        background: white;
+        color: black;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .section {
+        padding: 5rem 0;
+      }
+
+      .hero,
+      .page-hero {
+        padding-top: 2.75rem;
+      }
+
+      .hero-grid,
+      .split,
+      .grid,
+      .contact-layout,
+      .hours-grid,
+      .arrival-layout {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 0.95fr 1.05fr;
+        align-items: end;
+      }
+
+      .hero-copy {
+        padding-bottom: 1rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        line-height: 0.94;
+        font-weight: 400;
+      }
+
+      h1 {
+        max-width: 7ch;
+        font-size: clamp(3.8rem, 8.5vw, 7.25rem);
+        margin-top: 0.45rem;
+      }
+
+      h2 {
+        max-width: 11ch;
+        font-size: clamp(2.35rem, 5vw, 4.25rem);
+      }
+
+      h3 {
+        font-size: clamp(1.45rem, 2.3vw, 1.95rem);
+        margin-top: 0.6rem;
+      }
+
+      .hero-text,
+      .section-intro > p:last-child,
+      .image-card__body p,
+      .panel--text p,
+      .news-card__body p,
+      .site-footer p,
+      .team-copy p,
+      .contact-form label,
+      .arrival-copy p,
+      .hours-card p,
+      .page-hero__copy p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .hero-text {
+        max-width: 42ch;
+        margin: 1rem 0 0;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.4rem;
+      }
+
+      .button {
+        min-height: 3rem;
+        padding: 0 1.05rem;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        font-weight: 700;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+      }
+
+      .button--solid {
+        background: white;
+        color: black;
+      }
+
+      .button--solid:hover,
+      .button--solid:focus-visible {
+        background: #ece4d8;
+      }
+
+      .button--line {
+        border-color: var(--line-strong);
+        color: white;
+      }
+
+      .button--line:hover,
+      .button--line:focus-visible {
+        border-color: white;
+      }
+
+      .hero-media,
+      .panel,
+      .image-card,
+      .news-card,
+      .team-card,
+      .hours-card,
+      .contact-card,
+      .contact-form,
+      .arrival-card,
+      .cta-panel {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+      }
+
+      .hero-media,
+      .panel,
+      .image-card,
+      .news-card,
+      .team-card,
+      .hours-card,
+      .contact-card,
+      .contact-form,
+      .arrival-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+      }
+
+      .hero-media {
+        box-shadow: var(--shadow);
+      }
+
+      .hero-media img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .hero-caption {
+        padding: 0.7rem 0.9rem 0.85rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .fact-grid {
+        margin-top: 1.4rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .fact-card,
+      .hours-card,
+      .contact-card {
+        padding: 1rem;
+      }
+
+      .fact-card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background: var(--bg-soft);
+      }
+
+      .fact-card strong,
+      .hours-card strong,
+      .contact-link {
+        display: block;
+        margin-top: 0.45rem;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(1.45rem, 2.2vw, 2.1rem);
+        line-height: 0.95;
+      }
+
+      .section-intro {
+        display: grid;
+        gap: 0.8rem;
+        margin-bottom: 1.3rem;
+      }
+
+      .grid--features,
+      .grid--news,
+      .grid--three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .grid--team {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .grid--two,
+      .hours-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .image-card__media img,
+      .news-card img,
+      .team-card img,
+      .panel--image img,
+      .arrival-card img,
+      .page-hero__media img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .image-card__media img,
+      .news-card img {
+        aspect-ratio: 4 / 3;
+      }
+
+      .page-hero__media {
+        width: min(calc(100% - 2rem), var(--content));
+        margin-inline: auto;
+        overflow: hidden;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .page-hero__media img {
+        aspect-ratio: 16 / 5.5;
+      }
+
+      .page-hero__copy {
+        width: min(calc(100% - 2rem), var(--content));
+        margin-inline: auto;
+        padding-top: 1.25rem;
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .image-card__body,
+      .news-card__body,
+      .team-copy,
+      .panel--text,
+      .arrival-copy,
+      .contact-form {
+        padding: 0.95rem;
+      }
+
+      .panel--text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--bg-soft);
+      }
+
+      .panel--image img {
+        height: 100%;
+        min-height: 24rem;
+      }
+
+      .split {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+      }
+
+      .mini-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 1.4rem;
+      }
+
+      .mini-list span {
+        padding: 0.5rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--text);
+        font-size: 0.68rem;
+      }
+
+      .text-link {
+        color: white;
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 1.3rem;
+      }
+
+      .text-link:hover,
+      .text-link:focus-visible {
+        color: var(--accent);
+      }
+
+      .section-cta {
+        margin-top: 2rem;
+      }
+
+      .cta-panel {
+        background: #f3ede4;
+        color: #141414;
+        padding: 1.6rem;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .cta-panel .eyebrow {
+        color: #7e5d3c;
+      }
+
+      .cta-panel h2 {
+        max-width: 10ch;
+      }
+
+      .cta-panel .button--solid {
+        background: #111111;
+        color: white;
+      }
+
+      .cta-panel .button--line {
+        border-color: rgba(0, 0, 0, 0.24);
+        color: #111111;
+      }
+
+      .cta-panel .button--line:hover,
+      .cta-panel .button--line:focus-visible {
+        border-color: #111111;
+      }
+
+      .detail-card {
+        padding: 1rem;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: var(--panel);
+      }
+
+      .detail-card p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .team-card img {
+        aspect-ratio: 4 / 5;
+      }
+
+      .role {
+        margin-top: 0.4rem;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.68rem;
+        font-weight: 700;
+      }
+
+      .contact-layout {
+        grid-template-columns: 0.9fr 1.1fr;
+        align-items: stretch;
+      }
+
+      .contact-aside {
+        position: relative;
+        min-height: 100%;
+        padding: 1rem;
+        display: flex;
+        align-items: end;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .contact-aside::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(23, 23, 23, 0.96) 0%, rgba(15, 15, 15, 0.98) 100%);
+      }
+
+      .contact-stack {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 0.8rem;
+        width: 100%;
+      }
+
+      .contact-link {
+        word-break: break-word;
+      }
+
+      .contact-form {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+      }
+
+      .contact-form label {
+        display: grid;
+        gap: 0.45rem;
+        font-weight: 600;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-sm);
+        background: #111111;
+        color: var(--text);
+        padding: 0.82rem 0.9rem;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        outline: 2px solid rgba(215, 139, 83, 0.3);
+        border-color: rgba(215, 139, 83, 0.5);
+      }
+
+      .form-note {
+        color: var(--muted);
+      }
+
+      .arrival-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .arrival-card img {
+        aspect-ratio: 16 / 10;
+      }
+
+      .arrival-copy {
+        background: var(--bg-soft);
+      }
+
+      .contact-card--address strong {
+        display: block;
+        margin-top: 0.35rem;
+        color: var(--text);
+        font-size: 1rem;
+      }
+
+      .contact-photo {
+        overflow: hidden;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .contact-photo img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        min-height: 15rem;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .site-footer {
+        padding: 0 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 600ms ease, transform 600ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1100px) {
+        .hero-grid,
+        .split,
+        .grid--features,
+        .grid--news,
+        .grid--three,
+        .contact-layout,
+        .arrival-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .grid--team {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .cta-panel {
+          flex-direction: column;
+          align-items: start;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .site-header {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          border-radius: 30px;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .main-nav {
+          grid-column: 1 / -1;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.9rem;
+          padding-top: 0.6rem;
+        }
+
+        .main-nav.is-open {
+          display: flex;
+        }
+
+        .section {
+          padding: 3.75rem 0;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 16vw, 4.75rem);
+        }
+
+        h2 {
+          max-width: none;
+          font-size: clamp(2rem, 10vw, 3.2rem);
+        }
+
+        .fact-grid,
+        .grid--two,
+        .hours-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .grid--team {
+          grid-template-columns: 1fr;
+        }
+
+        .panel--image img {
+          min-height: 16rem;
+        }
+
+        .site-footer {
+          flex-direction: column;
+        }
+
+        .brand-mark {
+          width: 3.5rem;
+          height: 2.25rem;
+          padding: 0.13rem;
+        }
+      }
+
+      .brand-title {
+        font-size: 0.84rem;
+      }
+
+      .main-nav a {
+        font-size: 0.95rem;
+      }
+
+      .menu-toggle {
+        padding: 0.72rem 0.92rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      .fact-card strong,
+      .hours-card strong,
+      .contact-link {
+        font-family: "Instrument Sans", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.02;
+      }
+
+      h1 {
+        font-size: clamp(3.1rem, 6.2vw, 5.7rem);
+        margin-top: 0.4rem;
+      }
+
+      h2 {
+        font-size: clamp(2.35rem, 5vw, 4.25rem);
+        max-width: 12ch;
+      }
+
+      h3 {
+        font-size: clamp(1.45rem, 2.3vw, 1.95rem);
+        margin-top: 0.6rem;
+      }
+
+      .section {
+        padding: 3.4rem 0;
+      }
+
+      .hero,
+      .page-hero {
+        padding-top: 1.8rem;
+      }
+
+      .hero-grid,
+      .split,
+      .grid,
+      .contact-layout,
+      .hours-grid,
+      .arrival-layout {
+        gap: 0.8rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .hero-stage {
+        position: relative;
+        min-height: 30rem;
+        display: grid;
+        grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+        align-items: stretch;
+        gap: 0.9rem;
+      }
+
+      .hero-copy {
+        position: relative;
+        top: auto;
+        left: auto;
+        z-index: 1;
+        width: auto;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 30rem;
+        padding: 1.35rem 1.2rem 1.3rem;
+        background: linear-gradient(180deg, rgba(15, 15, 15, 0.97), rgba(15, 15, 15, 0.92));
+        border: 1px solid var(--line);
+        border-radius: 1.8rem;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.34rem 0.56rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 0.66rem;
+        text-transform: none;
+        letter-spacing: 0.04em;
+      }
+
+      .hero-text {
+        max-width: 31ch;
+        margin-top: 0.65rem;
+        font-size: 0.95rem;
+      }
+
+      .button-row {
+        margin-top: 0.9rem;
+        gap: 0.65rem;
+      }
+
+      .button {
+        min-height: 2.85rem;
+        padding: 0 0.95rem;
+        font-size: 0.92rem;
+      }
+
+      .hero-media-frame {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 2rem;
+        background: var(--panel);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+        min-height: 30rem;
+      }
+
+      .hero-media-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(15, 15, 15, 0.24) 0%, rgba(15, 15, 15, 0) 34%, rgba(15, 15, 15, 0.18) 100%);
+      }
+
+      .hero-media-frame img {
+        width: 100%;
+        height: 100%;
+        min-height: 30rem;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        object-position: center 44%;
+      }
+
+      .hero-utility {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.85rem;
+      }
+
+      .hero-utility span {
+        padding: 0.44rem 0.66rem;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.72rem;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .hero-caption {
+        padding: 0.7rem 0.9rem 0.85rem;
+        font-size: 0.92rem;
+      }
+
+      .fact-grid {
+        margin-top: 1rem;
+      }
+
+      .fact-card,
+      .hours-card,
+      .contact-card {
+        padding: 1rem;
+      }
+
+      .fact-card strong,
+      .hours-card strong,
+      .contact-link {
+        font-size: clamp(1.45rem, 2.2vw, 2.1rem);
+      }
+
+      .section-intro {
+        margin-bottom: 0.9rem;
+      }
+
+      .page-hero__media img {
+        aspect-ratio: 16 / 5.5;
+      }
+
+      .page-hero__copy {
+        padding-top: 0.8rem;
+        gap: 0.35rem;
+      }
+
+      .image-card__body,
+      .news-card__body,
+      .team-copy,
+      .panel--text,
+      .arrival-copy,
+      .contact-form {
+        padding: 0.8rem;
+      }
+
+      .panel--image img {
+        min-height: 20rem;
+      }
+
+      .mini-list span {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.68rem;
+      }
+
+      .detail-card {
+        padding: 0.85rem;
+      }
+
+      .role {
+        font-size: 0.68rem;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        padding: 0.82rem 0.9rem;
+      }
+
+      .contact-aside {
+        padding: 0.8rem;
+      }
+
+      .site-footer {
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 760px) {
+        .site-header {
+          position: static;
+          margin-top: 0.75rem;
+        }
+
+        .section {
+          padding: 2.8rem 0;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+        }
+
+        .hero-stage {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+          min-height: auto;
+        }
+
+        .hero-copy {
+          position: relative;
+          top: auto;
+          max-width: none;
+          left: auto;
+          width: auto;
+          transform: none;
+          z-index: auto;
+          margin-top: 0;
+          padding: 0;
+          background: transparent;
+          border: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 16vw, 4.75rem);
+        }
+
+        h2 {
+          font-size: clamp(2rem, 10vw, 3.2rem);
+          max-width: none;
+        }
+
+        .panel--image img {
+          min-height: 13rem;
+        }
+
+        .hero-media-frame {
+          width: 100%;
+          margin-left: 0;
+          min-height: 0;
+        }
+
+        .hero-media-frame img {
+          height: auto;
+          min-height: 0;
+          aspect-ratio: 16 / 10;
+          object-position: center center;
+        }
+
+        .button-row {
+          width: 100%;
+        }
+
+        .button-row .button {
+          flex: 1 1 100%;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-aside {
+          min-height: 20rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <img
+          class="brand-mark"
+          src="assets/images/Schluesselfreigestellt22-zoom.jpg"
+          alt="KFZ-Reparaturen Hoffmann"
+        />
+        <span class="brand-copy">
+          <span class="brand-title">KFZ-Reparaturen Hoffmann</span>
+          <span class="brand-subtitle">Schmidener Str. 51, 70372 Stuttgart</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="main-nav"
+        aria-expanded="false"
+      >
+        Men&uuml;
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+        <a href="#top">Start</a>
+        <a href="#about">&Uuml;ber uns</a>
+        <a href="#workshop">Werkstatt</a>
+        <a href="#news">Aktuell</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-grid">
+          <div class="hero-stage reveal is-visible">
+            <div class="hero-copy">
+              <p class="eyebrow">KFZ-Reparaturen Hoffmann</p>
+              <h1>Reparatur und T&Uuml;V direkt vor Ort.</h1>
+              <p class="hero-text">
+                Werkstatt in Bad Cannstatt fuer Diagnose, Inspektion und Reifenservice.
+              </p>
+
+              <div class="button-row">
+                <a class="button button--solid" href="#contact">Termin anfragen</a>
+                <a class="button button--line" href="tel:+49711567498">0711 567498</a>
+              </div>
+              <div class="hero-utility">
+                <span>Schmidener Str. 51</span>
+                <span>Seit 1986</span>
+                <span>Stuttgart Bad Cannstatt</span>
+              </div>
+            </div>
+
+            <figure class="hero-media-frame">
+              <img
+                src="assets/images/Head-nacht-motor1920.jpg"
+                alt="Werkstatt bei Nacht mit geoeffneter Motorhaube"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Leistungen</p>
+          <h2>Klare Leistungen.</h2>
+        </div>
+
+        <div class="grid grid--features">
+          <article class="image-card reveal">
+            <div class="image-card__media">
+              <img
+                src="assets/images/131213_ar_KFZ-Hoffmann19-diagnose.jpg"
+                alt="Diagnose in der Werkstatt"
+                loading="lazy"
+              />
+            </div>
+            <div class="image-card__body">
+              <p class="card-kicker">Diagnose</p>
+              <h3>Fehler finden, bevor Zeit verloren geht</h3>
+              <p>Elektronik, Warnleuchten und schnelle Fehlersuche.</p>
+            </div>
+          </article>
+
+          <article class="image-card reveal">
+            <div class="image-card__media">
+              <img
+                src="assets/images/131211_ar_Hoffmann-KFZ01-eingang-598x399.jpg"
+                alt="Eingang der Werkstatt"
+                loading="lazy"
+              />
+            </div>
+            <div class="image-card__body">
+              <p class="card-kicker">Werkstatt</p>
+              <h3>Reparatur, Inspektion, Licht und Reifenservice</h3>
+              <p>Alles auf einen Blick.</p>
+            </div>
+          </article>
+
+          <article class="image-card reveal">
+            <div class="image-card__media">
+              <img
+                src="assets/images/131211_ar_werkstatt.jpg"
+                alt="Aussenansicht der Werkstatt"
+                loading="lazy"
+              />
+            </div>
+            <div class="image-card__body">
+              <p class="card-kicker">Service</p>
+              <h3>Persoenlich, erreichbar und ohne anonyme Schleifen</h3>
+              <p>Direkt vor Ort und leicht erreichbar.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="page-hero__copy reveal">
+          <p class="eyebrow">&Uuml;ber uns</p>
+          <h2>Werkstattgeschichte mit Substanz statt Folklore.</h2>
+        </div>
+
+        <div class="split">
+          <figure class="panel panel--image reveal">
+            <img
+              src="assets/images/IMG_KFZHoffmann-BP1986.jpg"
+              alt="Historische Aufnahme der frueheren BP-Tankstelle aus 1986"
+              loading="lazy"
+            />
+          </figure>
+
+          <article class="panel panel--text reveal">
+            <p>Von der BP-Zeit bis heute: ein lokaler Betrieb mit echter Geschichte.</p>
+            <p>Im Mittelpunkt stehen Diagnose, Werkstattpraxis und persoenlicher Kontakt.</p>
+          </article>
+        </div>
+
+        <div class="grid grid--three" style="margin-top: 1rem;">
+          <article class="detail-card reveal">
+            <p class="card-kicker">Diagnose</p>
+            <h3>Steuergeraete lesen, Fehler einordnen, Ursachen klaeren</h3>
+            <p>Fehler finden statt raten.</p>
+          </article>
+
+          <article class="detail-card reveal">
+            <p class="card-kicker">Praezision</p>
+            <h3>Detailpruefung statt grober Vermutung</h3>
+            <p>Von Vermessung bis Reifenservice.</p>
+          </article>
+
+          <article class="detail-card reveal">
+            <p class="card-kicker">Herkunft</p>
+            <h3>Die historische BP-Zeit bleibt sichtbar</h3>
+            <p>Die Herkunft bleibt Teil der Marke.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="workshop" class="section">
+        <div class="page-hero__media reveal">
+          <img
+            src="assets/images/Kopfbildformat1920x340-innen.jpg"
+            alt="Innenansicht der Werkstatt"
+          />
+        </div>
+        <div class="page-hero__copy reveal">
+          <p class="eyebrow">Werkstatt</p>
+          <h2>Technik zuerst. Alles andere wird ruhiger.</h2>
+          <p>Echte Werkstattbilder. Echte Arbeit.</p>
+        </div>
+
+        <div class="grid grid--features">
+          <article class="image-card reveal">
+            <div class="image-card__media">
+              <img
+                src="assets/images/131213_ar_KFZ-Hoffmann21.jpg"
+                alt="Mechaniker arbeitet am Fahrzeug"
+                loading="lazy"
+              />
+            </div>
+            <div class="image-card__body">
+              <p class="card-kicker">Werkstattalltag</p>
+              <h3>Direkt am Fahrzeug</h3>
+              <p>Keine Kulisse, sondern echte Arbeit.</p>
+            </div>
+          </article>
+
+          <article class="image-card reveal">
+            <div class="image-card__media">
+              <img
+                src="assets/images/150724_ar_KFZ-Hoffmann-Getriebeoelwechsel-Geraet04.jpg"
+                alt="Automatikgetriebe-Spuelung"
+                loading="lazy"
+              />
+            </div>
+            <div class="image-card__body">
+              <p class="card-kicker">Spezialservice</p>
+              <h3>Automatikgetriebe spuelen und reinigen</h3>
+              <p>Ein klarer Zusatzservice.</p>
+            </div>
+          </article>
+
+          <article class="image-card reveal">
+            <div class="image-card__media">
+              <img
+                src="assets/images/kopfbild-werkstatt2-1920x340.jpg"
+                alt="Aussenansicht der Werkstatt am Abend"
+                loading="lazy"
+              />
+            </div>
+            <div class="image-card__body">
+              <p class="card-kicker">Standort</p>
+              <h3>Die Werkstatt von aussen</h3>
+              <p>Ein kurzer Blick auf den Standort.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="news" class="section">
+        <div class="page-hero__copy reveal">
+          <p class="eyebrow">Aktuell</p>
+          <h2>Hinweise und Meldungen brauchen kein Blog-Archiv-Gefuehl.</h2>
+          <p>Kurze Updates, sauber sortiert.</p>
+        </div>
+
+        <div class="grid grid--two">
+          <article class="news-card reveal">
+            <img
+              src="assets/images/kfz-werkstatt-pexels-maltelu-2244746.jpg"
+              alt="Beitrag zur Gewaehrleistung"
+              loading="lazy"
+            />
+            <div class="news-card__body">
+              <p class="news-date">29. Oktober 2025</p>
+              <h3>Eine Frage der Gewaehrleistung</h3>
+              <p>Keine angelieferten Teile, Oele oder Reifen.</p>
+            </div>
+          </article>
+
+          <article class="news-card reveal">
+            <img
+              src="assets/images/e-Mail-pexels-padrinan-1591062.jpg"
+              alt="Beitrag zur neuen E-Mail-Adresse"
+              loading="lazy"
+            />
+            <div class="news-card__body">
+              <p class="news-date">7. Februar 2025</p>
+              <h3>Wir haben eine neue E-Mail</h3>
+              <p>Neue direkte Mail: info@kfz-reparaturen-hoffmann.de.</p>
+            </div>
+          </article>
+
+          <article class="news-card reveal">
+            <img
+              src="assets/images/bewerbung-pexels-fauxels-3184465.jpg"
+              alt="Stellenangebot"
+              loading="lazy"
+            />
+            <div class="news-card__body">
+              <p class="news-date">26. Juni 2024</p>
+              <h3>Unsere aktuellen Stellenangebote (M/W/D)</h3>
+              <p>Gesucht: KFZ-Mechatroniker oder Mechaniker.</p>
+            </div>
+          </article>
+
+          <article class="news-card reveal">
+            <img
+              src="assets/images/131211_ar_Hoffmann-KFZ05.jpg"
+              alt="Kundensituation am Empfang"
+              loading="lazy"
+            />
+            <div class="news-card__body">
+              <p class="news-date">27. Juli 2015</p>
+              <h3>Automatikgetriebe spuelen und reinigen</h3>
+              <p>Ein spezialisierter Service fuer sensible Getriebe.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="team" class="section">
+        <div class="page-hero__media reveal">
+          <img
+            src="assets/images/131213_ar_KFZ-Hoffmann38-diechefs.jpg"
+            alt="Brigitte und Oliver Hoffmann vor der Werkstatt"
+          />
+        </div>
+        <div class="page-hero__copy reveal">
+          <p class="eyebrow">Team</p>
+          <h2>Werkstattvertrauen wird glaubwuerdig, wenn Menschen sichtbar sind.</h2>
+        </div>
+
+        <div class="grid grid--team">
+          <article class="team-card reveal">
+            <img
+              src="assets/images/131211_ar_Brigitte-Hoffmann04.jpg"
+              alt="Brigitte Hoffmann"
+              loading="lazy"
+            />
+            <div class="team-copy">
+              <h3>Brigitte Hoffmann</h3>
+              <p class="role">Buero und Kundenempfang</p>
+              <p>Telefon, Verwaltung, erster Kontakt.</p>
+            </div>
+          </article>
+
+          <article class="team-card reveal">
+            <img
+              src="assets/images/131213_ar_KFZ-Hoffmann23.jpg"
+              alt="Oliver Hoffmann"
+              loading="lazy"
+            />
+            <div class="team-copy">
+              <h3>Oliver Hoffmann</h3>
+              <p class="role">Werkstattleitung</p>
+              <p>Werkstattleitung und technische Entscheidungen.</p>
+            </div>
+          </article>
+
+          <article class="team-card reveal">
+            <img
+              src="assets/images/131213_ar_KFZ-Hoffmann39.jpg"
+              alt="Michael Bedekovic"
+              loading="lazy"
+            />
+            <div class="team-copy">
+              <h3>Michael Bedekovic</h3>
+              <p class="role">Mechanik und Motorservice</p>
+              <p>Mechanik, Rad und Motorservice.</p>
+            </div>
+          </article>
+
+          <article class="team-card reveal">
+            <img
+              src="assets/images/131213_ar_KFZ-Hoffmann09.jpg"
+              alt="Christian Mueller"
+              loading="lazy"
+            />
+            <div class="team-copy">
+              <h3>Christian M&uuml;ller</h3>
+              <p class="role">Werkstatt-Team</p>
+              <p>Werkstattarbeit direkt am Fahrzeug.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="page-hero__copy reveal">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Kontakt soll keine Suche sein.</h2>
+          <p>Alles Wichtige in einem kompakten Bereich.</p>
+        </div>
+
+        <div class="contact-layout">
+          <aside class="contact-aside reveal">
+            <div class="contact-stack">
+              <article class="contact-card">
+                <p class="contact-label">Telefon</p>
+                <a class="contact-link" href="tel:+49711567498">0711 567498</a>
+              </article>
+
+              <article class="contact-card">
+                <p class="contact-label">E-Mail</p>
+                <a class="contact-link" href="mailto:info@kfz-reparaturen-hoffmann.de">
+                  info@kfz-reparaturen-hoffmann.de
+                </a>
+              </article>
+
+              <article class="contact-card contact-card--address">
+                <p class="contact-label">Adresse</p>
+                <strong>Schmidener Str. 51</strong>
+                <p>70372 Stuttgart</p>
+              </article>
+
+              <figure class="contact-photo">
+                <img
+                  src="assets/images/131211_ar_Hoffmann-KFZ01-warten.jpg"
+                  alt="Wartebereich der Werkstatt"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </aside>
+
+          <form class="contact-form reveal">
+            <div class="contact-grid">
+              <label>
+                Vorname
+                <input type="text" name="firstName" placeholder="Vorname" />
+              </label>
+
+              <label>
+                Nachname
+                <input type="text" name="lastName" placeholder="Nachname" />
+              </label>
+
+              <label>
+                E-Mail
+                <input type="email" name="email" placeholder="name@beispiel.de" />
+              </label>
+
+              <label>
+                Telefonnummer
+                <input type="tel" name="phone" placeholder="Optional" />
+              </label>
+            </div>
+
+            <label>
+              Betreff
+              <input type="text" name="subject" placeholder="Worum geht es?" />
+            </label>
+
+            <label>
+              Nachricht
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Kommentar oder Nachricht"
+              ></textarea>
+            </label>
+
+            <p class="form-note">
+              Keine angelieferten Ersatzteile, Schmierstoffe oder Reifen.
+            </p>
+
+            <button class="button button--solid" type="submit">Anfrage senden</button>
+          </form>
+        </div>
+
+        <div class="arrival-layout">
+          <article class="arrival-card arrival-copy reveal">
+            <p class="eyebrow">Anfahrt</p>
+            <h2>Schmidener Str. 51, 70372 Stuttgart</h2>
+            <p>
+              Adresse wie im Original. Ein Klick fuehrt direkt zur Route.
+            </p>
+            <div class="button-row">
+              <a
+                class="button button--solid"
+                href="https://maps.google.de/maps?client=safari&q=Schmidener+Str.+51,+70372+Stuttgart"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Route in Google Maps
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="hours-grid">
+          <article class="hours-card reveal">
+            <p class="hours-label">Werkstattzeiten</p>
+            <strong>Mo-Fr 08-12 / 13-17</strong>
+            <p>Mittagspause von 12 bis 13 Uhr.</p>
+          </article>
+          <article class="hours-card reveal">
+            <p class="hours-label">B&uuml;rozeiten</p>
+            <strong>Mo-Fr 07-12 / 13-18</strong>
+            <p>Telefonisch sowie im B&uuml;ro erreichbar.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>KFZ-Reparaturen Hoffmann</strong>
+        <p>Schmidener Str. 51, 70372 Stuttgart</p>
+      </div>
+      <div>
+        <p>Telefon: 0711 567498</p>
+        <p>E-Mail: info@kfz-reparaturen-hoffmann.de</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
